@@ -20,7 +20,7 @@ public class NewsScrapingController {
 
     @GetMapping("entertainment")
     public ResponseEntity<Response> getEntertainmentNews() {
-        return ResponseEntity.ok(scrapingService.getEntertainmentNews());
+        return ResponseEntity.ok(scrapingService.getBusinessNews());
     }
 
     @GetMapping("business")
