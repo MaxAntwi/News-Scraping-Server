@@ -20,12 +20,12 @@ public class NewsScrapingController {
 
     @GetMapping("entertainment")
     public ResponseEntity<Response> getEntertainmentNews() {
-        return ResponseEntity.ok(scrapingService.getBusinessNews());
+        return ResponseEntity.ok(scrapingService.getEntertainmentNews());
     }
 
     @GetMapping("business")
     public ResponseEntity<Response> getBusinessNews() {
-        return ResponseEntity.ok(scrapingService.getEntertainmentNews());
+        return ResponseEntity.ok(scrapingService.getBusinessNews());
     }
 
     @GetMapping("sports")
