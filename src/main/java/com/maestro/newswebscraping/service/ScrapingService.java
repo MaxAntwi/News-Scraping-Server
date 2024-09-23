@@ -13,4 +13,8 @@ public interface ScrapingService {
     public Response getBusinessNews();
 
     public Response getSportsNews();
+
+    public Response getOpinionNews();
+
+    public Response getResearchNews();
 }

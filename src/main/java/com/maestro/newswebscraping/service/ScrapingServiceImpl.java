@@ -70,6 +70,32 @@ public class ScrapingServiceImpl implements ScrapingService{
                 .build();
     }
 
+    @Override
+    public Response getOpinionNews() {
+        String url = "https://www.myjoyonline.com/opinion";
+        log.info("Getting News from: {}", url);
+        List<Article> newsArticles = getArticles(url);
+        return Response
+                .builder()
+                .status(HttpStatus.OK.value())
+                .message("News Articles")
+                .articles(newsArticles)
+                .build();
+    }
+
+    @Override
+    public Response getResearchNews() {
+        String url = "https://www.myjoyonline.com/research";
+        log.info("Getting News from: {}", url);
+        List<Article> newsArticles = getArticles(url);
+        return Response
+                .builder()
+                .status(HttpStatus.OK.value())
+                .message("News Articles")
+                .articles(newsArticles)
+                .build();
+    }
+
 
     private List<Article> getArticles(String url) {
         List<Article> newsArticles = new ArrayList<>();
