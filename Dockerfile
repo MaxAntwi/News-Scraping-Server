@@ -9,4 +9,4 @@ FROM openjdk:17.0.1-slim
 WORKDIR /app
 COPY --from=BUILD /app/target/news-web-scraping-0.0.1-SNAPSHOT.jar news.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "ticket.jar"]
+ENTRYPOINT ["java", "-jar", "news.jar"]
