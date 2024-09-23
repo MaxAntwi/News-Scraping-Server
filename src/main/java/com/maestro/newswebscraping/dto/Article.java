@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-public class article {
+public class Article {
     private String title;
     private String source;
     private String imageUrl;
