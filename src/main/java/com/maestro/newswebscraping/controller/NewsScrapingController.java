@@ -1,7 +1,9 @@
 package com.maestro.newswebscraping.controller;
 
+import com.maestro.newswebscraping.dto.Response;
 import com.maestro.newswebscraping.service.ScrapingService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,8 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class NewsScrapingController {
     private final ScrapingService scrapingService;
     @GetMapping("news")
-    public String news() {
-        scrapingService.scrape("news");
-        return "Scraping";
+    public ResponseEntity<Response> news() {
+        return ResponseEntity.ok(scrapingService.getNews());
     }
 }
