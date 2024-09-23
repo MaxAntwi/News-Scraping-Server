@@ -17,4 +17,9 @@ public class NewsScrapingController {
     public ResponseEntity<Response> news() {
         return ResponseEntity.ok(scrapingService.getNews());
     }
+
+    @GetMapping("entertainment")
+    public ResponseEntity<Response> getEntertainmentNews() {
+        return ResponseEntity.ok(scrapingService.getEntertainmentNews());
+    }
 }
