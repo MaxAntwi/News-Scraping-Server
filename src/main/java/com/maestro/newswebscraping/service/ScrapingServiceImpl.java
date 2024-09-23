@@ -57,6 +57,19 @@ public class ScrapingServiceImpl implements ScrapingService{
                 .build();
     }
 
+    @Override
+    public Response getSportsNews() {
+        String url = "https://www.myjoyonline.com/sports";
+        log.info("Getting News from: {}", url);
+        List<Article> newsArticles = getArticles(url);
+        return Response
+                .builder()
+                .status(HttpStatus.OK.value())
+                .message("News Articles")
+                .articles(newsArticles)
+                .build();
+    }
+
 
     private List<Article> getArticles(String url) {
         List<Article> newsArticles = new ArrayList<>();
