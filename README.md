@@ -10,6 +10,12 @@ This is a News Scraping Server built with Spring Boot that fetches news articles
 - Provides structured responses in JSON format.
 - Supports multiple news categories.
 
+## Live Demo
+
+You can access the live application at: [www.myjoyonline.com News Scraping Server](https://myjoyonline-news-scraping-server.onrender.com/v1/news)
+
+
+
 ## Endpoints
 
 ### 1. Get News Articles
