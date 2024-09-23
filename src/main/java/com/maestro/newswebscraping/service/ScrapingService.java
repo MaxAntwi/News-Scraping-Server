@@ -17,4 +17,6 @@ public interface ScrapingService {
     public Response getOpinionNews();
 
     public Response getResearchNews();
+
+    public Response getElectionsNews();
 }

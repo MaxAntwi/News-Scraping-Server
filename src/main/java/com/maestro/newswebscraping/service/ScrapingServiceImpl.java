@@ -39,7 +39,7 @@ public class ScrapingServiceImpl implements ScrapingService{
         return Response
                 .builder()
                 .status(HttpStatus.OK.value())
-                .message("News Articles")
+                .message("Entertainment News")
                 .articles(newsArticles)
                 .build();
     }
@@ -52,7 +52,7 @@ public class ScrapingServiceImpl implements ScrapingService{
         return Response
                 .builder()
                 .status(HttpStatus.OK.value())
-                .message("News Articles")
+                .message("Business News")
                 .articles(newsArticles)
                 .build();
     }
@@ -65,7 +65,7 @@ public class ScrapingServiceImpl implements ScrapingService{
         return Response
                 .builder()
                 .status(HttpStatus.OK.value())
-                .message("News Articles")
+                .message("Sports News")
                 .articles(newsArticles)
                 .build();
     }
@@ -78,7 +78,7 @@ public class ScrapingServiceImpl implements ScrapingService{
         return Response
                 .builder()
                 .status(HttpStatus.OK.value())
-                .message("News Articles")
+                .message("Opinions")
                 .articles(newsArticles)
                 .build();
     }
@@ -91,7 +91,20 @@ public class ScrapingServiceImpl implements ScrapingService{
         return Response
                 .builder()
                 .status(HttpStatus.OK.value())
-                .message("News Articles")
+                .message("Research Articles")
+                .articles(newsArticles)
+                .build();
+    }
+
+    @Override
+    public Response getElectionsNews() {
+        String url = "https://www.myjoyonline.com/ghana-election/?election=1";
+        log.info("Getting News from: {}", url);
+        List<Article> newsArticles = getArticles(url);
+        return Response
+                .builder()
+                .status(HttpStatus.OK.value())
+                .message("Election Articles")
                 .articles(newsArticles)
                 .build();
     }

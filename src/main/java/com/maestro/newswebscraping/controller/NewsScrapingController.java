@@ -42,4 +42,9 @@ public class NewsScrapingController {
     public ResponseEntity<Response> getResearchNews() {
         return ResponseEntity.ok(scrapingService.getResearchNews());
     }
+
+    @GetMapping("election")
+    public ResponseEntity<Response> getElectionNews() {
+        return ResponseEntity.ok(scrapingService.getElectionsNews());
+    }
 }
